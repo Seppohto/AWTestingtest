@@ -1,5 +1,5 @@
 from unittest import TestCase, mock
-from testaus.mock_demo.mock_demo import get_file_path
+from testaus.mock_demo.mock_demo import get_file_path,list_file_in_dir
 
 class MockDemoTest(TestCase):
     # def test_get_env_works_properly(self):
@@ -14,4 +14,10 @@ class MockDemoTest(TestCase):
     def test_get_file_path(self):
         expected_result = 'C:\\Users\\Olli\\Desktop\\AW\\AW-testing-harjoitukset\\viikko2\\testaus\\mock_demo'
         result = get_file_path()
+        self.assertEqual(result, expected_result)
+    
+    def test_get_file_path(self):
+        mypath = "C:\\Users\\Olli\\Desktop\\AW\\AW-testing-harjoitukset\\viikko2\\"
+        expected_result = ['readme.txt', 'readmeSuccess.txt']
+        result = list_file_in_dir(mypath)
         self.assertEqual(result, expected_result)
