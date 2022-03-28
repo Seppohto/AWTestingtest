@@ -1,0 +1,2 @@
+Tänne tulee python testaus harjoitukset käyttäen 
+sovelluskehitystekniikkaa TDD
